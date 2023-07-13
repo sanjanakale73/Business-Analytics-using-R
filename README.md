@@ -1,5 +1,18 @@
-# Predictive-Model-for-Marketing-using-R
+# Predictive Model for Marketing using R
 
-A bank is marketing Certificates of Deposit (CD) to its existing customers. The bank estimates that 13% of them are likely to buy a CD if they are contacted. The cost of each contact is $10. The Net Present Value (NPV) to the bank of a customer buying a CD is $50. Clearly, it is not profitable to contact all the potential customers. So, the bank asks you to devise a classification model and predict whether or not a potential customer is a likely buyer before deciding whom to contact.
-Therefore, your job is to help the firm to build a predictive model using historical data with 4,521 observations. Each observation records whether a customer bought the CD or not in variable y. The data set has various features that can be utilized as predictors.
+## Introduction
+This project is part of the "Business Analytics using R" course.
 
+The objective of this project is to help a bank market Certificates of Deposit (CD) to its existing customers more effectively. The bank wants to predict whether a potential customer is likely to buy a CD before deciding whom to contact. By using a classification model, we can save costs and increase profitability by targeting only the most promising customers.
+
+## Project Details
+- The bank estimates that approximately 13% of its customers will likely buy a CD if contacted.
+- Each contact costs $10, and the Net Present Value (NPV) of a customer buying a CD is $50.
+- Our task is to build a predictive model using historical data consisting of 4,521 observations.
+- Each observation records whether a customer bought the CD or not (variable y).
+- The dataset contains various features that can be utilized as predictors.
+
+## Dataset Description
+The dataset includes the following information:
+
+<img width="541" alt="image" src="https://github.com/sanjanakale73/Predictive-Model-for-Marketing-using-R/assets/139512443/1b569e2a-5dc2-486a-b402-fa658ca41733">
