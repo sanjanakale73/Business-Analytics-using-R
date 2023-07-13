@@ -2,23 +2,19 @@
 rm(list=ls())
 
 # Use menu /Session/Set Working Directory/Choose Directory Or command below to set working directory
-setwd("C:\\Users\\Sanjana\\OneDrive - The University of Texas at Dallas\\Documents\\Masters UTD\\Spring 2022\\Business Analytics with R")
+# This assumes that the script file is located in the root folder of the project
+(setwd(dirname(rstudioapi::getSourceEditorContext()$path)))
 
 # 1a Load the data bank.csv into RStudio as a data.frame and name the data.frame as b
 b <- read.csv("bank.csv", stringsAsFactors = FALSE)
 
+# examin b
+str(b)  # you should have a data.frame with 4,521 observations and 17 variables
+
 # 1b Convert the following variables to the factor type: job, marital, education, default, housing, loan, contact, month, campaign, poutcome, y. 
-b$job <- as.factor(b$job)
-b$marital <- as.factor(b$marital)
-b$education <- as.factor(b$education)
-b$default <- as.factor(b$default)
-b$housing <- as.factor(b$housing)
-b$loan <- as.factor(b$loan)
-b$contact <- as.factor(b$contact)
-b$month <- as.factor(b$month)
-b$campaign <- as.factor(b$campaign)
-b$poutcome <- as.factor(b$poutcome)
-b$y <- as.factor(b$y)
+selectedColumns <- c("job", "marital", "education", "default", "housing", 
+                     "loan", "contact", "month", "campaign", "poutcome", "y")
+b[, selectedColumns] <- lapply(b[, selectedColumns], function(x){as.factor(x)})
 
 # 1c
 # now we will split the data into testing and training data sets
