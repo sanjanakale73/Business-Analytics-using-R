@@ -1,6 +1,10 @@
 # Clear the workspace
 rm(list=ls())
 
+# start with loading the library
+library(rpart)
+library(rpart.plot)
+
 # Use menu /Session/Set Working Directory/Choose Directory Or command below to set working directory
 # This assumes that the script file is located in the root folder of the project
 (setwd(dirname(rstudioapi::getSourceEditorContext()$path)))
@@ -30,8 +34,6 @@ b.test <- b[-train,]   #1507 observations
 
 # 2a
 # Building decision tree with rpart
-library(rpart)
-
 # Grow tree 
 fit <- rpart(y ~ ., 
              data=b.train, 
@@ -41,8 +43,6 @@ fit <- rpart(y ~ .,
 
 # 2b
 # Plot the tree
-library(rpart.plot)
-
 rpart.plot(fit, type = 1, extra = 4, main="Classification Tree for Customer purchasing CD", cex=0.47)
 
 # 2c
